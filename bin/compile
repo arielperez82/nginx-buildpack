@@ -70,7 +70,7 @@ build-nginx() {
             --prefix=$nginx_install_dir \
             --with-pcre=pcre-$NGINX_PCRE_VERSION \
             --add-module=$PWD/headers-more-nginx-module-$NGINX_HEADERS_MORE_VERSION \
-            --add-module=$PWD/nginx-uuid4-module-$NGINX_UUID4_VERSION \
+            #--add-module=$PWD/nginx-uuid4-module-$NGINX_UUID4_VERSION \
             --with-http_addition_module \
             --with-http_dav_module \
             --with-http_gzip_static_module \
