@@ -9,7 +9,7 @@ main() {
 
     NGINX_VERSION=1.5.12
     NGINX_PCRE_VERSION=8.34
-    NGINX_HEADERS_MORE_VERSION=0.32
+    NGINX_HEADERS_MORE_VERSION=0.25
     NGINX_UUID4_VERSION=1.0
 
     set -eo pipefail
@@ -72,6 +72,7 @@ build-nginx() {
             --with-pcre=pcre-$NGINX_PCRE_VERSION \
             --add-module=$PWD/headers-more-nginx-module-$NGINX_HEADERS_MORE_VERSION \
             --add-module=$PWD/nginx-uuid4-module-$NGINX_UUID4_VERSION \
+            --with-ipv6 \
             --with-http_addition_module \
             --with-http_dav_module \
             --with-http_gzip_static_module \
